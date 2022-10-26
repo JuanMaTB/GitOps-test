@@ -36,7 +36,7 @@ jobs:
       run: cd docker && docker build -f Dockerfile -t benhelith/github-image-python:latest . 
     - name: Docker hub authentication
       run: docker login -u=${{ secrets.DOCKER_HUB_USERNAME }} -p=${{ secrets.DOCKER_HUB_PWD }}
-        - name: Push
+    - name: Push
       run: docker push benhelith/github-image-python:latest
     - name: Integration test
       run: docker run benhelith/github-image-python:latest
