@@ -40,3 +40,5 @@ jobs:
       run: docker push benhelith/github-image-python:latest
     - name: Integration test
       run: docker run benhelith/github-image-python:latest
+    - name: Debug Docker
+      run: docker images
